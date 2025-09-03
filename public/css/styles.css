@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.centralizar {
+    display: flex;
+    align-items: center;
+}
+
+.tela {
+    width: 90%;
+    max-width: 500px;
+    height: 500px;
+    display: flex;
+    border: 1px solid black;
+    flex-direction: column;
+    align-items: center;;
+}
+
+.infor {
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    justify-content: space-between;
+}
+
+.visor {
+    width: 100%;
+    height: 450px;
+    position: relative;
+    border: 1px solid;
+    overflow: hidden;
+}
+
+.personagem {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: blue;
+    position: absolute;
+    justify-content: center;
+}
+
+.personagem-ataque {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: transparent;
+    position: absolute;
+}
