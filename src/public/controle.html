@@ -1,20 +1,36 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/controle.css">
 </head>
+
 <body>
     <div class="tela">
-        <button>A</button>
-        <button>B</button>
-        <button>C</button>
-        <button>D</button>
+        <div class="btn-container centralizar">
+            <div class="content grid">
+                <button class="btn btn-movimento">A</button>
+                <button class="btn btn-movimento">B</button>
+                <button class="btn btn-movimento">C</button>
+                <button class="btn btn-movimento">D</button>
+            </div>
+        </div>
+
+        <div class="btn-container centralizar">
+            <div class="content centralizar">
+                <button class="btn">A</button>
+                <button class="btn">B</button>
+                <button class="btn">C</button>
+                <button class="btn">D</button>
+            </div>
+        </div>
     </div>
 
     <script src="/socket.io/socket.io.js"></script>
     <script src="js/controle.js"></script>
 </body>
+
 </html>

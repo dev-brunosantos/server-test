@@ -1,0 +1,106 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to bottom, #2d2d2d, #1a1a1a);
+    font-family: 'Segoe UI', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Área principal do controle (modo horizontal) */
+.tela {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Containers dos botões nas laterais */
+.btn-container {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Centralização */
+.centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo dos botões */
+.btn {
+    width: 70px;
+    height: 70px;
+    background: radial-gradient(circle, #dcdcdc, #a0a0a0);
+    border: 3px solid #555;
+    border-radius: 50%;
+    box-shadow: inset -4px -4px 6px #ffffff40, inset 4px 4px 6px #00000080;
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: transform 0.1s ease;
+    touch-action: manipulation;
+}
+
+.btn:active {
+    transform: scale(0.92);
+    box-shadow: inset 4px 4px 6px #00000080;
+}
+
+/* Direcional estilo cruz (esquerda) */
+.grid {
+    display: grid;
+    grid-template-columns: 80px 80px;
+    grid-template-rows: 80px 80px;
+    gap: 20px;
+    transform: rotate(45deg);
+}
+
+/* Botões de ação em losango (direita) */
+.btn-container:nth-child(2) .content {
+    display: grid;
+    grid-template-areas:
+        ".   B   ."
+        "A   .   C"
+        ".   D   .";
+    gap: 15px;
+}
+
+.btn-container:nth-child(2) .btn:nth-child(1) { grid-area: A; }
+.btn-container:nth-child(2) .btn:nth-child(2) { grid-area: B; }
+.btn-container:nth-child(2) .btn:nth-child(3) { grid-area: C; }
+.btn-container:nth-child(2) .btn:nth-child(4) { grid-area: D; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .btn {
+        width: 60px;
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .grid {
+        gap: 15px;
+    }
+
+    .btn-container {
+        width: 45%;
+    }
+}
